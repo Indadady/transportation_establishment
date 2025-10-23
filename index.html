@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 정선군 교통봉사단 감사 워크숍</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzEyNjZ8MHwxfHNlYXJjaHwxfHxqZWp1JTIwc3ByaW5nJTIwY2Fub2xhJTIwZmxvd2VyfGVufDB8fHx8MTY5ODAzNTIwN3ww&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: cover;
+            background-position: center 30%;
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.3rem;
+            margin: 10px 0 0;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        .content-section {
+            background-color: #ffffff;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a4a8d;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .overview-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .overview-table td {
+            padding: 12px 5px;
+            border-bottom: 1px solid #eee;
+            font-size: 1rem;
+        }
+        .overview-table td:first-child {
+            width: 100px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        /* Itinerary Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #e0e0e0;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            background-color: #1a4a8d;
+            border-radius: 50%;
+            border: 3px solid #f4f7f6;
+        }
+        .timeline-time {
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .timeline-content {
+            font-size: 1rem;
+        }
+        .timeline-content strong {
+            color: #111;
+        }
+        .meal-icon {
+            font-size: 0.8rem;
+            background-color: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 10px;
+            margin-left: 5px;
+            color: #555;
+        }
+        .star-highlight {
+            color: #D9534F;
+            font-weight: 700;
+        }
+
+        /* Highlights Grid */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .highlight-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .highlight-item h4 {
+            margin: 0 0 10px 0;
+            color: #1a4a8d;
+        }
+
+        /* Benefits List */
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .benefits-list li {
+            position: relative;
+            padding-left: 30px;
+            font-size: 1rem;
+        }
+        .benefits-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #28a745;
+            font-weight: 700;
+        }
+
+        /* Info List */
+        .info-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .info-list li {
+            font-size: 1rem;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .info-list li strong {
+            color: #D9534F;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>2026년 정선군 교통봉사단 감사 워크숍</h1>
+        <p>"당신의 빛나는 열정, 제주의 봄으로 보답합니다"</p>
+    </header>
+
+    <div class="container">
+
+        <section class="content-section">
+            <h2>초대의 글</h2>
+            <p>언제나 보이지 않는 곳에서 정선군의 안전한 교통 환경을 위해 헌신해주신 교통봉사단 여러분께 진심으로 깊은 감사의 말씀을 드립니다.</p>
+            <p>지난 1년간의 노고에 보답하고자, 따뜻한 봄의 기운이 가장 먼저 스미는 곳, 제주에서 쉼과 활력을 되찾는 특별한 시간을 마련했습니다.</p>
+            <p>제주의 아름다운 자연 속에서 재충전의 기쁨을 누리시고, 봉사단원님들 간의 화합과 교류의 장이 되기를 바랍니다. 여러분의 소중한 여정에 저희 TOUR MAKER가 정성으로 함께하겠습니다.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>행사 개요</h2>
+            <table class="overview-table">
+                <tr>
+                    <td>행사명</td>
+                    <td>2026년 정선군 교통봉사단 감사 워크숍</td>
+                </tr>
+                <tr>
+                    <td>일시</td>
+                    <td>2026년 3월 16일 (월) ~ 3월 18일 (수) (2박 3일)</td>
+                </tr>
+                <tr>
+                    <td>대상</td>
+                    <td>정선군 교통봉사단 25명</td>
+                </tr>
+                <tr>
+                    <td>항공</td>
+                    <td>원주공항 ↔ 제주공항 왕복</td>
+                </tr>
+                <tr>
+                    <td>숙소</td>
+                    <td><span class="star-highlight">★</span> 서귀포오션 호텔 (4성급, 2인 1실)</td>
+                </tr>
+                <tr>
+                    <td>핵심 테마</td>
+                    <td>#힐링 #감사 #재충전 #프리미엄 #서귀포의봄</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>이번 여정의 4가지 핵심 포인트</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <h4>POINT 1. 한적한 서귀포의 낭만</h4>
+                    <p>복잡한 제주시를 벗어나 한적하고 여유로운 서귀포 시내 중심의 <strong>서귀포오션 호텔</strong>에 머무릅니다. 일정 후 이중섭 거리나 올레시장을 자유롭게 산책하며 제주의 밤을 만끽하세요.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>POINT 2. <span class="star-highlight">★</span> 현지인 맛집에서의 만찬</h4>
+                    <p>정해진 단체 식당이 아닙니다. 1일차 저녁은 현지인과 외국인들이 즐겨 찾는 <strong>'법환플래터'</strong>에서 이국적인 분위기 속 피자, 파스타와 함께 편안한 담소를 나누는 시간을 갖습니다.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>POINT 3. 제주의 봄과 스릴</h4>
+                    <p>동백꽃과 온실 식물이 가득한 <strong>카멜리아힐</strong>과 곶자왈을 달리는 <strong>에코랜드</strong>에서 봄을 만끽하고, <strong>981파크</strong>의 짜릿한 레이싱과 <strong>스카이워터쇼</strong>의 다이내믹함을 함께 체험합니다.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4>POINT 4. 격이 다른 제주의 맛</h4>
+                    <p>제주에서만 맛볼 수 있는 진미를 준비했습니다. <strong>옥돔정식(1인 1마리)</strong>부터 <strong>갈치조림&고등어구이</strong>, <strong>제주 흑돼지구이</strong>, <strong>토종닭 샤브샤브</strong>까지, 오감을 만족시키는 미식 여행을 선사합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>상세 일정표</h2>
+            
+            <h3>1일차 : 3월 16일 (월) - 설렘, 제주와의 첫 만남</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-time">11:10</span>
+                    <div class="timeline-content"><strong>원주공항 출발</strong></div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">12:25</span>
+                    <div class="timeline-content">제주공항 도착 및 직원 미팅</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">오후</span>
+                    <div class="timeline-content">
+                        중식 (★옥돔정식 1인 1마리) <span class="meal-icon">중식</span><br>
+                        환상의 <strong>스카이워터쇼</strong> 관람 (다이빙쇼, 공중곡예)<br>
+                        치유의 숲, <strong>사려니숲길</strong> 삼림욕 체험<br>
+                        석식 (<span class="star-highlight">★현지 맛집 '법환플래터'</span> - 피자/파스타) <span class="meal-icon">석식</span><br>
+                        숙소 체크인 (<strong><span class="star-highlight">★</span>서귀포오션 호텔</strong>) 및 자유시간
+                    </div>
+                </div>
+            </div>
+
+            <h3>2일차 : 3월 17일 (화) - 만끽, 제주의 봄 속으로</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-time">오전</span>
+                    <div class="timeline-content">
+                        기상 및 조식 (호텔식) <span class="meal-icon">조식</span><br>
+                        <strong>세미나 진행 (1시간)</strong><br>
+                        제주의 스피드, <strong>981파크</strong> (레이싱 2회 + 서바이벌 1회)<br>
+                        중식 (★갈치조림 & 고등어구이) <span class="meal-icon">중식</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">오후</span>
+                    <div class="timeline-content">
+                        바다 위에서 만나는 절경, <strong>산방산 유람선</strong> 탑승<br>
+                        동백꽃과 제주의 자연, <strong>카멜리아힐</strong> 관람<br>
+                        석식 (★제주 흑돼지구이) <span class="meal-icon">석식</span><br>
+                        숙소 복귀 및 자유시간 (<strong>서귀포오션 호텔</strong>)
+                    </div>
+                </div>
+            </div>
+
+            <h3>3일차 : 3월 18일 (수) - 힐링, 아쉬움을 뒤로하며</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-time">오전</span>
+                    <div class="timeline-content">
+                        기상 및 조식 (호텔식) <span class="meal-icon">조식</span><br>
+                        농수산 쇼핑센터 방문<br>
+                        곶자왈 숲속 기차여행, <strong>에코랜드</strong> 체험<br>
+                        여행의 피로를 푸는 <strong>아로마 족욕</strong> (또는 녹차족욕)<br>
+                        중식 (★토종닭 샤브샤브) <span class="meal-icon">중식</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">13:30</span>
+                    <div class="timeline-content">제주공항 도착 및 탑승수속</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">14:30</span>
+                    <div class="timeline-content"><strong>제주공항 출발</strong></div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">15:45</span>
+                    <div class="timeline-content"><strong>원주공항 도착</strong> 및 해산. 고생하셨습니다.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>여러분의 헌신에 보답하는 혜택 (전 일정 포함)</h2>
+            <p>봉사자분들께서는 편안하게 몸만 오실 수 있도록, 교통사업소와 저희가 모든 것을 준비했습니다. (산출내역서 기반)</p>
+            <ul class="benefits-list">
+                <li>원주-제주 왕복 항공권</li>
+                <li>4성급 서귀포오션 호텔 (2박)</li>
+                <li>전 일정 식사 (특식 5회 포함)</li>
+                <li>전 일정 대형버스 (기사 수고비 포함)</li>
+                <li>일정표 내 전 관광지 입장료</li>
+                <li>981파크, 스카이워터쇼 등</li>
+                <li>산방산유람선, 에코랜드 등</li>
+                <li>카멜리아힐, 아로마 족욕 등</li>
+                <li>세미나실 이용료 (1시간)</li>
+                <li>최고 한도 여행자 보험</li>
+                <li>전 일정 동행 전문 인솔자</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>출발 전 안내사항 (필독)</h2>
+            <ul class="info-list">
+                <li>
+                    <strong>집결 일시: 2026년 3월 16일 (월) 오전 09:30 (예정)</strong><br>
+                    <span style="font-size: 0.9rem;">(항공기 11:10 출발 / 1시간 30분 전 수속 마감)</span>
+                </li>
+                <li>
+                    <strong>집결 장소:</strong> 원주공항 2층 출발장
+                </li>
+                <li>
+                    <strong>필수 준비물: </strong> <strong>신분증 (주민등록증, 운전면허증, 여권 중 택1)</strong><br>
+                    <span style="font-size: 0.9rem;">(신분증이 없으면 항공기 탑승이 절대 불가합니다.)</span>
+                </li>
+                <li>
+                    <strong>추천 준비물:</strong> 편안한 신발(운동화), 봄 외투(제주는 바람이 많습니다), 개인 상비약, 세면도구, 충전기, 작은 우산 등
+                </li>
+                <li>
+                    <strong>비상 연락망</strong><br>
+                    - 정선군 교통사업소: 안현우 주무관 (010-XXXX-XXXX)<br>
+                    - 여행사(TOUR MAKER) 인솔자: <strong>이재명 대표 (010-9443-7881)</strong>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>주최: 정선군 교통사업소 | 주관: TOUR MAKER (대표: 이재명)</p>
+        <p>본 행사가 즐겁고 안전한 재충전의 시간이 되도록 최선을 다하겠습니다.</p>
+    </footer>
+
+</body>
+</html>
